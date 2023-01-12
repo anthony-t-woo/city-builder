@@ -10,3 +10,8 @@
     -   "add" button to submit slogan and add to the list <button>
 -   Bottom Right Section
     -   div to hold p elements created from JS based on user entry <div>
+
+## State
+
+-   3x images
+-   city slogans
