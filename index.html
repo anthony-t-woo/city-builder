@@ -25,33 +25,33 @@
     <body>
         <header>
             <img class="logo" src="assets/html_css_js.png" alt="logo" />
-            <h1>City Builder App</h1>
+            <h1>Dream House Builder App</h1>
         </header>
 
         <main>
             <body class="main-body-of-app">
-                <h1 class="city-name" id="city-name">City Name</h1>
+                <h1 class="house-name" id="house-name">House Name</h1>
                 <section class="top-section">
-                    <div class="climate-container">
-                        <select id="climate-dropdown"></select>
-                        <img src="" alt="pic of your chosen climate" />
-                    </div>
-                    <div class="park-container">
-                        <select id="park-dropdown"></select>
-                        <img src="" alt="pic of your chosen park" />
-                    </div>
                     <div class="architecture-container">
                         <select id="architecture-dropdown"></select>
-                        <img id src="" alt="pic of your chosen architecture" />
+                        <img id="architecture-img" src="" alt="pic of your chosen architecture" />
+                    </div>
+                    <div class="location-container">
+                        <select id="location-dropdown"></select>
+                        <img id="location-img" src="" alt="pic of your chosen location" />
+                    </div>
+                    <div class="features-container">
+                        <select id="features-dropdown"></select>
+                        <img id="features-img" src="" alt="pic of your chosen features" />
                     </div>
                 </section>
                 <section class="bottom-section">
-                    <div class="add-slogan-div">
-                        <input id="slogan-input" placeholder="type city slogan here" />
-                        <button id="slogan-button">Add</button>
-                        <div id="report"></div>
+                    <div class="add-streetname-div">
+                        <input id="streetname-input" placeholder="type homes streetname here" />
+                        <button id="streetname-button">Add</button>
+                        <div id="report-div"></div>
                     </div>
-                    <div id="slogan-list"></div>
+                    <div id="streetname-list"></div>
                 </section>
             </body>
         </main>
