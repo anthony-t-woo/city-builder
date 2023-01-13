@@ -10,12 +10,13 @@ const architectureEL = document.getElementById('architecture-img');
 const locationEL = document.getElementById('location-img');
 const featuresEL = document.getElementById('features-img');
 // user input elements
-const streetnameInputEl = document.getElementById('streetname-input');
-const streetnameButtonEl = document.getElementById('streetname-button');
+const welcomeMatInputEl = document.getElementById('welcome-mat-phrase-input');
+const welcomeMatButtonEl = document.getElementById('welcome-mat-phrase-button');
 // report element
 const reportEl = document.getElementById('report-div');
 
 /* State */
+let welcomeMessages = [];
 let architectureChange = 0;
 let locationChange = 0;
 let featuresChange = 0;
@@ -62,18 +63,36 @@ for (let featuresOption of featuresOptions) {
 architectureDropdown.addEventListener('change', () => {
     architectureChange++;
     architectureEL.src = `./assets/${architectureDropdown.value}.jpeg`;
+    displayStats();
 });
 
 locationDropdown.addEventListener('change', () => {
     locationChange++;
     locationEL.src = `./assets/${locationDropdown.value}.jpeg`;
+    displayStats();
 });
 
 featuresDropdown.addEventListener('change', () => {
     featuresChange++;
     featuresEL.src = `./assets/${featuresDropdown.value}.jpeg`;
+    displayStats();
+});
+
+welcomeMatButtonEl.addEventListener('click', () => {
+    if (welcomeMatInputEl.value === 0) {
+        alert('how will you greet your guests?');
+    } else {
+        const currentWelcome = welcomeMatInputEl.value;
+        welcomeMessages.push(currentWelcome);
+        welcomeMatInputEl.value = '';
+    }
+    console.log(welcomeMessages);
 });
 
 /* Display Functions */
+
+function displayStats() {
+    reportEl.textContent = `You have changed the architecture ${architectureChange} times, the location ${locationChange} times, and the features ${featuresChange} times. How should we greet your guests?`;
+}
 
 // (don't forget to call any display functions you want to run on page load!)
