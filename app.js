@@ -14,6 +14,7 @@ const welcomeMatInputEl = document.getElementById('welcome-mat-phrase-input');
 const welcomeMatButtonEl = document.getElementById('welcome-mat-phrase-button');
 // report element
 const reportEl = document.getElementById('report-div');
+const welcomeMatMessagesEL = document.getElementById('welcome-messages');
 
 /* State */
 let welcomeMessages = [];
@@ -85,6 +86,7 @@ welcomeMatButtonEl.addEventListener('click', () => {
         const currentWelcome = welcomeMatInputEl.value;
         welcomeMessages.push(currentWelcome);
         welcomeMatInputEl.value = '';
+        displayWelcomeMessages();
     }
     console.log(welcomeMessages);
 });
@@ -95,4 +97,12 @@ function displayStats() {
     reportEl.textContent = `You have changed the architecture ${architectureChange} times, the location ${locationChange} times, and the features ${featuresChange} times. How should we greet your guests?`;
 }
 
+function displayWelcomeMessages() {
+    welcomeMatMessagesEL.textContent = '';
+    for (let welcomeMessage of welcomeMessages) {
+        const p = document.createElement('p');
+        p.textContent = welcomeMessage;
+        welcomeMatMessagesEL.append(p);
+    }
+}
 // (don't forget to call any display functions you want to run on page load!)

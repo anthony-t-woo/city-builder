@@ -37,3 +37,36 @@ main {
 img {
     width: 300px;
 }
+
+.main-section {
+    display: grid;
+    justify-items: center;
+}
+
+.top-section {
+    display: flex;
+    margin: 40px;
+}
+.top-section div {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.bottom-section {
+    display: flex;
+}
+
+.bottom-section div {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    width: 50%;
+}
+
+button {
+    height: 30px;
+}
+input {
+    height: 30px;
+}
