@@ -1,39 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <img class="logo" src="assets/html_css_js.png" alt="logo" />
+            <h1>Dream House Builder App</h1>
+        </header>
 
-</head>
+        <main>
+            <section class="main-section" id="main-section">
+                <h2 class="house-name" id="house-name">House Name</h2>
+                <section class="top-section">
+                    <div class="architecture-container">
+                        <h2>Architecture</h2>
+                        <select id="architecture-dropdown"></select>
+                        <img
+                            id="architecture-img"
+                            src="./assets/strawhut.jpg"
+                            alt="pic of your chosen architecture"
+                        />
+                    </div>
+                    <div class="location-container">
+                        <h2>Location</h2>
+                        <select id="location-dropdown"></select>
+                        <img
+                            id="location-img"
+                            src="./assets/wasteland.jpg"
+                            alt="pic of your chosen location"
+                        />
+                    </div>
+                    <div class="features-container">
+                        <h2>Features</h2>
+                        <select id="features-dropdown"></select>
+                        <img
+                            id="features-img"
+                            src="./assets/ditch.jpg"
+                            alt="pic of your chosen features"
+                        />
+                    </div>
+                </section>
+                <div id="report-div"></div>
+                <section class="bottom-section">
+                    <section class="user-input-section">
+                        <div class="add-welcome-mat-phrase-div">
+                            <input id="welcome-mat-phrase-input" placeholder="welcome mat phrase" />
+                            <button id="welcome-mat-phrase-button">Add</button>
+                        </div>
+                        <div class="add-home-name-div">
+                            <input id="home-name-input" placeholder="name your house" />
+                            <button id="home-name-button">Add</button>
+                        </div>
+                    </section>
 
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+                    <div class="welcome-mat" id="welcome-mat">WELCOME!</div>
+                    <div id="welcome-messages">
+                        <p>Greet your guests at the door with a message on the door mat!</p>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </body>
 </html>
