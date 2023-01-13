@@ -83,7 +83,6 @@ select {
 .welcome-mat {
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 300px;
     width: 450px;
     background-color: rgb(152, 119, 76);
@@ -92,6 +91,7 @@ select {
     text-align: center;
     border: 15px outset rgb(78, 53, 36);
     border-radius: 8%;
+    padding: 15px;
 }
 
 .main-section p,
