@@ -13,10 +13,13 @@ const backgroundEl = document.getElementById('main-section');
 // user input elements
 const welcomeMatInputEl = document.getElementById('welcome-mat-phrase-input');
 const welcomeMatButtonEl = document.getElementById('welcome-mat-phrase-button');
+const nameHomeInputEl = document.getElementById('home-name-input');
+const nameHomeButtonEl = document.getElementById('home-name-button');
 // report element
 const reportEl = document.getElementById('report-div');
 const welcomeMatMessagesEL = document.getElementById('welcome-messages');
 const matMessageEL = document.getElementById('welcome-mat');
+const houseNameEl = document.getElementById('house-name');
 
 /* State */
 let welcomeMessages = [];
@@ -83,7 +86,7 @@ featuresDropdown.addEventListener('change', () => {
 });
 
 welcomeMatButtonEl.addEventListener('click', () => {
-    if (welcomeMatInputEl.value === 0) {
+    if (welcomeMatInputEl.value === '') {
         alert('how will you greet your guests?');
     } else {
         const currentWelcome = welcomeMatInputEl.value;
@@ -93,6 +96,11 @@ welcomeMatButtonEl.addEventListener('click', () => {
         displayWelcomeMessages();
     }
     console.log(welcomeMessages);
+});
+
+nameHomeButtonEl.addEventListener('click', () => {
+    houseNameEl.textContent = nameHomeInputEl.value;
+    nameHomeInputEl.value = '';
 });
 
 /* Display Functions */
