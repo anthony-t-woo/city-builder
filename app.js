@@ -9,6 +9,7 @@ const featuresDropdown = document.getElementById('features-dropdown');
 const architectureEL = document.getElementById('architecture-img');
 const locationEL = document.getElementById('location-img');
 const featuresEL = document.getElementById('features-img');
+const backgroundEl = document.getElementById('main-section');
 // user input elements
 const welcomeMatInputEl = document.getElementById('welcome-mat-phrase-input');
 const welcomeMatButtonEl = document.getElementById('welcome-mat-phrase-button');
@@ -71,6 +72,7 @@ architectureDropdown.addEventListener('change', () => {
 locationDropdown.addEventListener('change', () => {
     locationChange++;
     locationEL.src = `./assets/${locationDropdown.value}.jpeg`;
+    backgroundEl.style.backgroundImage = `url("/assets/${locationDropdown.value}-background.jpg")`;
     displayStats();
 });
 
