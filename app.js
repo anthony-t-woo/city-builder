@@ -15,6 +15,7 @@ const welcomeMatButtonEl = document.getElementById('welcome-mat-phrase-button');
 // report element
 const reportEl = document.getElementById('report-div');
 const welcomeMatMessagesEL = document.getElementById('welcome-messages');
+const matMessageEL = document.getElementById('welcome-mat');
 
 /* State */
 let welcomeMessages = [];
@@ -85,6 +86,7 @@ welcomeMatButtonEl.addEventListener('click', () => {
     } else {
         const currentWelcome = welcomeMatInputEl.value;
         welcomeMessages.push(currentWelcome);
+        matMessageEL.textContent = welcomeMatInputEl.value;
         welcomeMatInputEl.value = '';
         displayWelcomeMessages();
     }
@@ -99,10 +101,12 @@ function displayStats() {
 
 function displayWelcomeMessages() {
     welcomeMatMessagesEL.textContent = '';
+
     for (let welcomeMessage of welcomeMessages) {
         const p = document.createElement('p');
         p.textContent = welcomeMessage;
         welcomeMatMessagesEL.append(p);
     }
 }
+
 // (don't forget to call any display functions you want to run on page load!)

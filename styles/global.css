@@ -55,18 +55,33 @@ img {
 
 .bottom-section {
     display: flex;
+    flex-direction: column;
 }
 
-.bottom-section div {
+.add-welcome-mat-phrase-div {
     display: flex;
-    width: 50%;
-    justify-content: space-around;
-    width: 50%;
+    height: auto;
 }
 
-button {
-    height: 30px;
-}
+button,
 input {
     height: 30px;
+    margin: 10px;
+}
+
+#report-div {
+    margin: 30px;
+}
+
+.welcome-mat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 400px;
+    background-color: rgb(152, 119, 76);
+    font-family: cursive;
+    font-size: 40px;
+    border: 15px outset rgb(78, 53, 36);
+    border-radius: 8%;
 }
