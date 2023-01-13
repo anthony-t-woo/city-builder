@@ -28,17 +28,16 @@ let architectureOptions = [
 ];
 let locationOptions = [
     { display: 'Select an option', value: '' },
-    { display: 'Urban City', value: 'City-location' },
+    { display: 'Urban City', value: 'city-location' },
     { display: 'Suburban', value: 'suburban-location' },
     { display: 'rural', value: 'rural-location' },
 ];
 let featuresOptions = [
     { display: 'Select an option', value: '' },
-    { display: 'Swimming Pool', value: 'bungalow-feature' },
+    { display: 'Swimming Pool', value: 'pool-feature' },
     { display: 'Workshop', value: 'workshop-feature' },
     { display: 'Sport Court', value: 'sport-feature' },
 ];
-
 // create option elements from arrays
 for (let architectureOption of architectureOptions) {
     const archOptionEL = document.createElement('option');
@@ -60,6 +59,20 @@ for (let featuresOption of featuresOptions) {
 }
 
 /* Events */
+architectureDropdown.addEventListener('change', () => {
+    architectureChange++;
+    architectureEL.src = `./assets/${architectureDropdown.value}.jpeg`;
+});
+
+locationDropdown.addEventListener('change', () => {
+    locationChange++;
+    locationEL.src = `./assets/${locationDropdown.value}.jpeg`;
+});
+
+featuresDropdown.addEventListener('change', () => {
+    featuresChange++;
+    featuresEL.src = `./assets/${featuresDropdown.value}.jpeg`;
+});
 
 /* Display Functions */
 
