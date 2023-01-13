@@ -56,6 +56,9 @@ img {
     flex-direction: column;
     margin: 20px;
     align-items: center;
+    background-color: bisque;
+    width: 340px;
+    height: 350px;
 }
 
 .bottom-section {
@@ -64,19 +67,17 @@ img {
     align-items: center;
 }
 
-.add-welcome-mat-phrase-div {
+.add-welcome-mat-phrase-div,
+.add-home-name-div {
     display: flex;
     height: auto;
 }
 
 button,
-input {
+input,
+select {
     height: 30px;
     margin: 10px;
-}
-
-#report-div {
-    margin: 30px;
 }
 
 .welcome-mat {
@@ -95,10 +96,12 @@ input {
 
 .main-section p,
 h2,
-#report-div {
+#report-div,
+.user-input-section {
     background-color: bisque;
     color: black;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     font-size: 1.5rem;
+    margin: 20px;
 }
